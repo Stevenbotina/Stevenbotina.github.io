@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contacto</title>
+</head>
+<body>
+
+    <center><h1>Contacto</h1></center>
+    <table align="center">
+        <form action="/enviar" method="post">
+            <tr>
+                <td>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <input type="submit" value="Enviar">
+                </td>
+            </tr>
+        </form>
+    </table>
+    
+    <center>
+        <h2>Información de Contacto</h2>
+        <p>Teléfono: +57 320 000 0000</p>
+        <p>Email: contacto@tiendademoda.com</p>
+        <p>Dirección: Calle xx, 123, Bogota, Colombia</p>
+    </center>
+    <br>
+    <center><a href="index.html">Volver al Inicio</a></center>
+</body>
+</html>
