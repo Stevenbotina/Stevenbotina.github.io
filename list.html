@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista de Usuarios Registrados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Primer nombre</th>
+                <th>Segundo nombre</th>
+                <th>Correo Electrónico</th>
+            </tr>
+        </thead>
+        <tbody id="user-table">
+            <!-- Los datos se llenarán dinámicamente -->
+        </tbody>
+    </table>
+    <script>
+        // Llama al PHP para obtener datos de los usuarios
+        fetch('backend/api/list.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('user-table').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar los datos:', error));
+    </script>
+</body>
+
+</html>
