@@ -41,11 +41,10 @@
             </tr>
         </thead>
         <tbody id="user-table">
-            <!-- Los datos se llenarán dinámicamente -->
+
         </tbody>
     </table>
     <script>
-        // Llama al PHP para obtener datos de los usuarios
         fetch('backend/api/list.php')
             .then(response => response.text())
             .then(data => {
